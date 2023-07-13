@@ -1,0 +1,33 @@
+.bp-input {
+  flex-grow: 1;
+}
+
+.bp-input-wrapper {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.4rem;
+  border: 1.5px solid #969595;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+}
+
+.bp-input-icon {
+  display: flex;
+  align-items: center;
+  color: #969595;
+}
+
+.bp-input-error {
+  border: 1.5px solid red;
+}
+
+.bp-input-error-message {
+  color: red;
+}
+
+.bp-input-label {
+  font-size: 0.8rem;
+  /* margin-bottom: 1rem; */
+}
