@@ -1,0 +1,55 @@
+:root {
+  --cell-padding: 0.8rem;
+  --header-font-size: 0.9rem;
+  --body-font-size: 0.8rem;
+}
+
+.bp-table-container {
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+
+.bp-table-wrapper {
+  overflow-x: auto;
+}
+
+.bp-table {
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+}
+
+.bp-table-body-tr {
+  border-bottom: 2px solid #e1e1e2;
+}
+
+.bp-table-th {
+  padding: var(--cell-padding);
+  background-color: var(--background-color);
+  font-weight: 500;
+  border-bottom: 2px solid #e1e1e2;
+  font-size: var(--header-font-size);
+}
+
+.bp-table-td {
+  padding: var(--cell-padding);
+  font-size: var(--body-font-size);
+}
+
+.bp-table-th,
+.bp-table-td {
+  overflow: hidden; /* To prevent content from overflowing the cell */
+  text-overflow: ellipsis; /* This will add '...' to the end of the content that doesn't fit in the cell */
+  white-space: nowrap; /* This prevents the cell content from wrapping to the next line */
+  vertical-align: middle;
+}
+
+.bp-table-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.bp-table-no-records-text {
+  color: rgba(1, 1, 1, 0.5);
+}

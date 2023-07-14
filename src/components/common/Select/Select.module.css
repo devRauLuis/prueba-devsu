@@ -1,0 +1,43 @@
+.bp-select {
+  flex-grow: 1;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  border: 1.5px solid #969595;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: #969595;
+}
+
+.bp-select:focus {
+  outline: 1.5px solid rgba(1, 1, 1, 0.5);
+}
+
+.bp-select-label {
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.bp-select-xs {
+  font-size: 0.5rem;
+  padding: 0.1rem;
+}
+
+.bp-select-sm {
+  font-size: 0.7rem;
+  padding: 0.2rem;
+}
+
+.bp-select-md {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+.bp-select-lg {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.bp-select-xl {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+}

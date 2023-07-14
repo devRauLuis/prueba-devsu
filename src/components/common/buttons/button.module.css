@@ -2,15 +2,16 @@
 .bp-button-secondary {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
-  padding: 1rem 1rem;
+  padding: 0.8rem 1rem;
   font-weight: 500;
   border-radius: 0.2rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  font-size: 0.9rem;
 }
 
 .bp-button:hover {
-  transform: translateY(-1px);
+  transform: scale(1.02);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 

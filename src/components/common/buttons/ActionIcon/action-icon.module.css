@@ -1,0 +1,23 @@
+.bp-action-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+
+.bp-action-icon:hover {
+  background-color: var(--background-color);
+}
+
+.bp-action-icon-filled {
+  background-color: var(--secondary-color);
+}
+
+.bp-action-icon:disabled {
+  opacity: 0.25;
+}

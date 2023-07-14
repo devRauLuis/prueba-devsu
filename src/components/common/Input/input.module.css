@@ -13,6 +13,10 @@
   gap: 0.05rem;
 }
 
+.bp-input-wrapper:focus-within {
+  outline: 1.5px solid rgba(1, 1, 1, 0.5);
+}
+
 .bp-input-icon {
   display: flex;
   align-items: center;
@@ -30,4 +34,49 @@
 .bp-input-label {
   font-size: 0.8rem;
   /* margin-bottom: 1rem; */
+}
+
+.bp-input-xs {
+  font-size: 0.5rem;
+  padding: 0.1rem;
+}
+
+.bp-input-sm {
+  font-size: 0.7rem;
+  padding: 0.2rem;
+}
+
+.bp-input-md {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+.bp-input-lg {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.bp-input-xl {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+}
+
+.bp-input-wrapper-xs {
+  padding: 0.1rem;
+}
+
+.bp-input-wrapper-sm {
+  padding: 0.2rem;
+}
+
+.bp-input-wrapper-md {
+  padding: 0.3rem;
+}
+
+.bp-input-wrapper-lg {
+  padding: 0.4rem;
+}
+
+.bp-input-wrapper-xl {
+  padding: 0.6rem;
 }
