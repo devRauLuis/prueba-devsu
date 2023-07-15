@@ -32,6 +32,7 @@
     "@babel/preset-react": "^7.22.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.3",
     "@types/lodash.debounce": "^4.0.7",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
@@ -49,18 +50,22 @@
     "jest-svg-transformer": "^1.0.0",
     "prettier": "3.0.0",
     "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.1.6",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1"
   },
   "jest": {
-    "testEnvironment": "jsdom",
     "moduleNameMapper": {
       "^.+\\.svg$": "jest-svg-transformer",
-      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+      "@/(.*)": "<rootDir>/src/$1",
+      "@components/(.*)": "<rootDir>/src/components/$1"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
-    ]
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom"
   }
 }

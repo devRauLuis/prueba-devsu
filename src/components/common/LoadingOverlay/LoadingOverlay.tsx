@@ -19,6 +19,7 @@ const LoadingOverlay: React.FunctionComponent<LoadingOverlayProps> = ({
             size={32}
             strokeWidth={1}
             className={`${classes.spinner} animate-spin`}
+            data-testid="loading-spinner"
           />
         </div>
       )}
