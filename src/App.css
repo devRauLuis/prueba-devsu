@@ -3,6 +3,8 @@
   --secondary-color: #e8ecf4;
   --tertiary-color: #092056;
   --background-color: #f4f6f9;
+  --valid-color: #50ac50;
+  --error-color: #b53d3d;
   --base-font-size: 16px;
   --heading-scale-factor: 1.5;
   --heading-font-family: 'DM Sans', Arial, sans-serif;
@@ -168,6 +170,10 @@
 
 .mt-3xl {
   margin-top: 2.8rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .mb-xxs {
@@ -614,6 +620,83 @@
   gap: 3.2rem;
 }
 
+.gap-x-sm {
+  column-gap: 0.8rem;
+}
+
+.gap-x-md {
+  column-gap: 1.2rem;
+}
+
+.gap-x-lg {
+  column-gap: 1.6rem;
+}
+
+.gap-x-xl {
+  column-gap: 2rem;
+}
+
+.gap-x-2xl {
+  column-gap: 2.4rem;
+}
+
+.gap-x-3xl {
+  column-gap: 2.8rem;
+}
+
+.gap-x-4xl {
+  column-gap: 3.2rem;
+}
+
+.gap-y-sm {
+  row-gap: 0.8rem;
+}
+
+.gap-y-md {
+  row-gap: 1.2rem;
+}
+
+.gap-y-lg {
+  row-gap: 1.6rem;
+}
+
+.gap-y-xl {
+  row-gap: 2rem;
+}
+
+.gap-y-2xl {
+  row-gap: 2.4rem;
+}
+
+.gap-y-3xl {
+  row-gap: 2.8rem;
+}
+
+.gap-y-4xl {
+  row-gap: 3.2rem;
+}
+
 .block {
   display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
