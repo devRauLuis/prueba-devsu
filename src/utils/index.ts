@@ -1,3 +1,5 @@
+import { formatToYYYYMMDD } from './date';
+
 // Generate an array of products with a given amount using map
 export function generateFakeProducts(amount: number) {
   let numbers = Array.from({ length: amount }, (x, i) => i + 1);
@@ -20,8 +22,8 @@ export function generateFakeProducts(amount: number) {
       name: name,
       description: description,
       logo: logo,
-      date_release: date_release,
-      date_revision: date_revision,
+      date_release: formatToYYYYMMDD(date_release),
+      date_revision: formatToYYYYMMDD(date_revision),
     };
   });
 
