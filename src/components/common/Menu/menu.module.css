@@ -1,0 +1,15 @@
+.bp-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px 0;
+}
+
+.bp-option {
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.bp-option:hover {
+  background-color: #f0f0f0;
+}

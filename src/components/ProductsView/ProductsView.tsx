@@ -1,6 +1,6 @@
-import LinkButton from './common/buttons/LinkButton';
-import { Input } from './common/Input';
-import ProductsTable from './ProductsTable/ProductsTable';
+import LinkButton from '../common/buttons/LinkButton';
+import Input from '../common/inputs/Input';
+import ProductsTable from './ProductsTable';
 
 interface ProductsViewProps {}
 
@@ -9,7 +9,7 @@ const ProductsView: React.FunctionComponent<ProductsViewProps> = () => {
     <div className="">
       <div className="flex justify-between align-center">
         <Input placeholder="Search..." style={{ width: 200 }} />
-        <LinkButton to="/agregar-producto" color="primary">
+        <LinkButton to="/formulario-producto" color="primary">
           Agregar
         </LinkButton>
       </div>

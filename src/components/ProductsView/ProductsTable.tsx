@@ -1,12 +1,13 @@
 import { FunctionComponent } from 'react';
 import Table from '@/components/common/Table';
-import columns from './columns';
 import { useProductsQuery } from '@/api/queries';
+import useProductsTableColumns from './hooks/useProductsTableColumns';
 
 interface ProductsTableProps {}
 
 const ProductsTable: FunctionComponent<ProductsTableProps> = () => {
   const { data, isLoading } = useProductsQuery();
+  const columns = useProductsTableColumns();
 
   return (
     <Table
