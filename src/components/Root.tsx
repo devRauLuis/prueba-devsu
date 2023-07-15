@@ -1,16 +1,12 @@
 import { Link, Outlet } from 'react-router-dom';
-import logoSvg from '/logo.svg';
+import Header from './Header';
 
 interface RootProps {}
 
 const Root: React.FunctionComponent<RootProps> = () => {
   return (
     <div>
-      <header className="bp-header">
-        <Link to="/">
-          <img src={logoSvg} alt="" className="bp-header-logo" />
-        </Link>
-      </header>
+      <Header />
       <main className="bp-main">
         <Outlet />
       </main>

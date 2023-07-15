@@ -1,16 +1,24 @@
-import { useRouteError } from 'react-router-dom';
+import Header from '@/components/Header';
+import Button from '@/components/common/buttons/Button';
+import { useNavigate, useRouteError } from 'react-router-dom';
+import { MoodSadDizzy } from 'tabler-icons-react';
 
 interface ErrorPageProps {}
 
 const ErrorPage: React.FunctionComponent<ErrorPageProps> = () => {
   const error = useRouteError() as { statusText?: string; message?: string };
   console.error(error);
+  const navigate = useNavigate();
 
   return (
-    <>
-      Error
-      <>{error.statusText ?? error.message} </>
-    </>
+    <div>
+      <Header />
+      <div className="flex flex-col align-center mt-lg">
+        <MoodSadDizzy size={68} />
+        <h3 className="">{error.statusText ?? error.message} </h3>
+        <Button onClick={() => navigate(-1)}>Go back</Button>
+      </div>
+    </div>
   );
 };
 
