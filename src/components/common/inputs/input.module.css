@@ -17,6 +17,10 @@
   outline: 1.5px solid rgba(1, 1, 1, 0.5);
 }
 
+.bp-input-disabled {
+  opacity: 0.6;
+}
+
 .bp-input-icon {
   display: flex;
   align-items: center;
@@ -24,11 +28,21 @@
 }
 
 .bp-input-error {
-  border: 1.5px solid red;
+  border: 1.5px solid var(--error-color);
+}
+
+.bp-input-valid {
+  border: 2px solid var(--valid-color);
 }
 
 .bp-input-error-message {
-  color: red;
+  color: var(--error-color);
+  font-size: 0.8rem;
+}
+
+.bp-input-valid-message {
+  color: var(--valid-color);
+  font-size: 0.8rem;
 }
 
 .bp-input-label {

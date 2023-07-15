@@ -1,6 +1,7 @@
+import { Loader2 } from 'tabler-icons-react';
 import classes from './input.module.css';
 
-interface InputProps
+export interface InputProps
   extends Omit<
     React.DetailedHTMLProps<
       React.InputHTMLAttributes<HTMLInputElement>,
@@ -15,6 +16,7 @@ interface InputProps
   touched?: boolean;
   error?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  loading?: boolean;
 }
 
 const Input: React.FunctionComponent<InputProps> = ({
@@ -27,12 +29,15 @@ const Input: React.FunctionComponent<InputProps> = ({
   touched,
   error,
   size = 'md',
+  loading,
   ...props
 }) => {
   const hasError = touched && error;
-  const showValidMessage = valid && !hasError;
+  const isValid = touched && valid;
+  const showValidMessage = isValid && !hasError;
   const sizeClassName = classes[`bp-input-${size}`];
   const wrapperSizeClassName = classes[`bp-input-wrapper-${size}`];
+  const disabledClassName = props.disabled ? classes['bp-input-disabled'] : '';
 
   return (
     <div>
@@ -44,20 +49,26 @@ const Input: React.FunctionComponent<InputProps> = ({
       <div
         className={`${classes['bp-input-wrapper']} ${
           hasError ? classes['bp-input-error'] : ''
-        } ${wrapperSizeClassName}`}
+        } ${
+          isValid ? classes['bp-input-valid'] : ''
+        } ${wrapperSizeClassName} ${disabledClassName}`}
       >
         <input
-          {...props}
           id={name}
+          name={name}
           placeholder={placeholder}
           className={`${classes['bp-input']} ${sizeClassName} ${className}`}
+          {...props}
         />
+        {loading && <Loader2 className="animate-spin" />}
         {icon && <div className={`${classes['bp-input-icon']}`}>{icon}</div>}
       </div>
       {hasError && (
-        <div className={`${classes['bp-input-error-message']}`}>{error}</div>
+        <div className={`${classes['bp-input-error-message']} mt-xs`}>
+          {error}
+        </div>
       )}
-      {showValidMessage && (
+      {showValidMessage && !hasError && (
         <div className={`${classes['bp-input-valid-message']}`}>Valid!</div>
       )}
     </div>
