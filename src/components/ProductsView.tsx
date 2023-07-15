@@ -1,5 +1,4 @@
-import Button from './common/buttons/Button';
-import LinkButton from './common/buttons/LinkButton/LinkButton';
+import LinkButton from './common/buttons/LinkButton';
 import { Input } from './common/Input';
 import ProductsTable from './ProductsTable/ProductsTable';
 
