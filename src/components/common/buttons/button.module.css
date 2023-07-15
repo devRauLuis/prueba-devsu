@@ -10,6 +10,16 @@
   font-size: 0.9rem;
 }
 
+.bp-button:disabled {
+  opacity: 0.5;
+}
+
+.bp-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .bp-link-button {
   text-decoration: none;
 }

@@ -5,8 +5,9 @@ import Root from './components/Root';
 import Home from './pages/Home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import ProductFormPage from './pages/ProductFormPage';
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient();
 
 function App() {
   const router = createBrowserRouter([
@@ -14,7 +15,13 @@ function App() {
       path: '/',
       element: <Root />,
       errorElement: <ErrorPage />,
-      children: [{ index: true, element: <Home /> }],
+      children: [
+        { index: true, element: <Home /> },
+        {
+          path: '/formulario-producto/:productId?',
+          element: <ProductFormPage />,
+        },
+      ],
     },
   ]);
 

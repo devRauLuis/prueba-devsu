@@ -15,7 +15,8 @@ const ErrorPage: React.FunctionComponent<ErrorPageProps> = () => {
       <Header />
       <div className="flex flex-col align-center mt-lg">
         <MoodSadDizzy size={68} />
-        <h3 className="">{error.statusText ?? error.message} </h3>
+        <h3>Error</h3>
+        <h6 className="">{error.statusText ?? error.message} </h6>
         <Button onClick={() => navigate(-1)}>Go back</Button>
       </div>
     </div>
